@@ -63,8 +63,9 @@
 .lang-menu {
   display: none;
   position: absolute;
-  bottom: 100%; /* Открывается ВВЕРХ, так как кнопка внизу страницы */
-  right: 0;     /* Выравнивание по правому краю кнопки */
+  bottom: 100%;
+  left: 50%; /* Сдвигаем на середину иконки */
+  transform: translateX(-50%); /* Центрируем сам список относительно иконки */
   background-color: #fff;
   box-shadow: 0px -4px 12px rgba(0,0,0,0.15); /* Тень падает вверх */
   border-radius: 8px;
@@ -269,26 +270,32 @@ body {
 </a>
 </form>
 </section>
+   <!-- Контейнер для выравнивания по центру -->
+<div class="flex justify-center py-6 w-full">
+    
     <!-- Ваша новая кастомная кнопка с глобусом -->
-<div class="custom-lang-selector">
-  <button class="globe-icon-btn">
-    <!-- SVG Иконка глобуса -->
-    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"></circle>
-      <line x1="2" y1="12" x2="22" y2="12"></line>
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-    </svg>
-  </button>
-  
-  <!-- Выпадающий список -->
-  <ul class="lang-menu">
-    <li><a href="#" data-lang="en">English</a></li>
-    <li><a href="#" data-lang="fr">Français</a></li>
-    <li><a href="#" data-lang="de">Deutsch</a></li>
-    <li><a href="#" data-lang="es">Español</a></li>
-  </ul>
+    <div class="custom-lang-selector">
+      <button class="globe-icon-btn">
+        <!-- SVG Иконка глобуса -->
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </button>
+      
+      <!-- Выпадающий список -->
+      <ul class="lang-menu">
+        <li><a href="#" data-lang="en">English</a></li>
+        <li><a href="#" data-lang="fr">Français</a></li>
+        <li><a href="#" data-lang="de">Deutsch</a></li>
+        <li><a href="#" data-lang="es">Español</a></li>
+      </ul>
+    </div>
+    
 </div>
-
+<!-- Скрытый системный элемент Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
 <!-- Скрытый системный элемент Google Translate -->
 <div id="google_translate_element" style="display:none;"></div>
 <!-- END: Checkout Form Section -->
