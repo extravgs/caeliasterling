@@ -129,8 +129,8 @@ body {
 </div>
 </div>
 <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-<button aria-label="Go to slide 1" class="w-2 h-2 rounded-full bg-white"></button>
-<button aria-label="Go to slide 2" class="w-2 h-2 rounded-full bg-white/50 border border-white"></button>
+<button id="dot-1" aria-label="Go to slide 1" class="w-2 h-2 rounded-full bg-white"></button>
+<button id="dot-2" aria-label="Go to slide 2" class="w-2 h-2 rounded-full bg-white/50 border border-white"></button>
 </div>
 </section>
 <!-- END: Hero Section -->
@@ -344,5 +344,59 @@ body {
 
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('hero-carousel');
+    const dot1 = document.getElementById('dot-1');
+    const dot2 = document.getElementById('dot-2');
+    
+    // Классы для активной и неактивной точки
+    const activeDotClass = "w-2 h-2 rounded-full bg-white";
+    const inactiveDotClass = "w-2 h-2 rounded-full bg-white/50 border border-white";
 
+    // Функция переключения слайда
+    function goToSlide(slideIndex) {
+      if (slideIndex === 0) {
+        // Показываем первую картинку
+        carousel.style.transform = 'translateX(0%)';
+        dot1.className = activeDotClass;
+        dot2.className = inactiveDotClass;
+      } else {
+        // Сдвигаем контейнер на 100% влево, показывая вторую картинку
+        carousel.style.transform = 'translateX(-100%)';
+        dot1.className = inactiveDotClass;
+        dot2.className = activeDotClass;
+      }
+    }
+
+    // Слушатели кликов по точкам
+    dot1.addEventListener('click', () => goToSlide(0));
+    dot2.addEventListener('click', () => goToSlide(1));
+
+    // --- Добавляем поддержку свайпов для телефонов ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50; // минимальная длина свайпа в пикселях
+      if (touchStartX - touchEndX > swipeThreshold) {
+        // Свайп влево -> показать второй слайд
+        goToSlide(1);
+      }
+      if (touchEndX - touchStartX > swipeThreshold) {
+        // Свайп вправо -> вернуться на первый слайд
+        goToSlide(0);
+      }
+    }
+  });
+</script>
 </body></html>
