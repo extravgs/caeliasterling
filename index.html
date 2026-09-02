@@ -1,0 +1,553 @@
+<!DOCTYPE html><html class="" data-stitch-anim-opacity="true" lang="en" style="--stan-store-primary-color: #A7A7A7; --stan-store-primary-color-rgb: undefined; --stan-store-theme-primary-color: #A7A7A7; --stan-store-secondary-color: #f5f5f5; --stan-store-theme-secondary-color: #f5f5f5; --stan-store-theme-tone1-color: hsla(0,0%, 99%, 0.75); --stan-store-theme-tone2-color: undefined; --stan-store-theme-tone3-color: undefined; --stan-store-theme-derived1-color: #f5f5f5; --stan-store-theme-derived2-color: hsla(0,0%, 99%, 1); --stan-store-theme-derived3-color: undefined; --stan-store-theme-primary-text-color-rgb: 0, 0, 0; --stan-store-theme-primary-text-color: #000000; --stan-store-theme-button-text-color: #000000; --stan-store-theme-secondary-text-color: #00000088; --stan-store-theme-placeholder-text-color: #00000088; --stan-store-theme-primary-font: Libre Baskerville; opacity: 1; background: transparent !important;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Love N. (@LoveNeural) | Stan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="imported-styles">
+    @import url(https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800&family=Inter:wght@300;400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair:ital,opsz,wght@0,5..1200,300;0,5..1200,400;0,5..1200,500;0,5..1200,600;0,5..1200,700;0,5..1200,800;1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,600;1,5..1200,700;1,5..1200,800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
+  </style>
+<style data-purpose="base-layout">
+    body {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      --stan-store-default-color: #3a36db;
+      overflow-y: auto;
+      --stan-box-shadow: 0px 15px 50px rgba(0,29,109,0.07), inset 0px -5px 10px rgba(0,0,0,0.01);
+      font-family: Plus Jakarta Sans, sans-serif;
+      background: transparent !important;
+    }
+    .white_page_wrapper {
+      position: relative;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 475px;
+      min-height: 100vh;
+      padding: 0;
+      font-family: Nunito Sans, sans-serif;
+      line-height: 1.5;
+      color: rgba(0,0,0,.87);
+      background: transparent !important;
+    }
+    .store-layout {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      padding: 0;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      position: relative;
+      background: transparent !important;
+    }
+    #bg-fixed-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      background-color: #ffffff;
+    }
+    #bg-main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: high-quality;
+      transform: translateZ(0);
+    }
+    .store__container.spotlight {
+      background-color: transparent !important;
+    }
+    .store-theme.spotlight {
+      --default-font-primary: "Fraunces", sans-serif;
+      --default-font-secondary: "Inter", sans-serif;
+      font-family: var(--default-font-secondary) !important;
+      font-family: var(--stan-store-theme-secondary-font, var(--default-font-secondary)) !important;
+      color: var(--stan-store-theme-primary-text-color);
+      background: transparent !important;
+    }
+  </style>
+<style data-purpose="header-styles">
+    .store-theme.spotlight .store-header__content {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      border-bottom: none !important;
+    }
+    .store-theme.spotlight .store-header__content .store-header__image {
+      display: none;
+    }
+    .store-theme.spotlight .store-header__content .store-header__profile {
+      position: fixed;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+      margin-bottom: 0;
+      text-shadow: 0 10px 25px rgba(0,0,0,.2);
+      width: 100%;
+      max-width: 475px;
+      padding: 0 15px;
+      overflow: visible;
+      z-index: 10;
+    }
+    .store-theme.spotlight .store-header__content .store-header__profile .store-header__names .store-header__fullname {
+      font-family: var(--default-font-primary);
+      font-family: var(--stan-store-theme-primary-font, var(--default-font-primary));
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 110%;
+      letter-spacing: -.01em;
+      text-align: center;
+      width: 100%;
+      color: #fff;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      white-space: inherit !important;
+      overflow: hidden !important;
+      text-overflow: inherit !important;
+      margin-bottom: 26px;
+      padding-bottom: 4px;
+      filter: drop-shadow(0 5px 30px rgba(0,0,0,.8));
+    }
+    .store-theme.spotlight .store-header__content .store-header__profile .store-header__bio {
+      font-family: var(--default-font-secondary);
+      font-family: var(--stan-store-theme-secondary-font, var(--default-font-secondary));
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -.03em;
+      color: #fff;
+      text-shadow: 0 5px 30px rgba(0,0,0,.5);
+      margin-bottom: 30px;
+      overflow: visible;
+    }
+  </style>
+<style data-purpose="content-blocks">
+    .store-theme.spotlight .store-content {
+      margin-top: min(100%, 100vw);
+      min-height: calc(100vh - 300px);
+      padding: 0 15px;
+      position: relative;
+      z-index: 10;
+    }
+    .store-theme.spotlight .section-title {
+      background: var(--stan-store-theme-secondary-color);
+      box-shadow: 0 10px 50px rgba(0,0,0,.15);
+      border-radius: 25px;
+      font-family: var(--default-font-secondary);
+      font-family: var(--stan-store-theme-secondary-font, var(--default-font-secondary));
+      letter-spacing: -.01em;
+      z-index: 1;
+      padding: 15px 25px;
+      margin: 20px 0;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      color: var(--stan-store-theme-primary-text-color);
+    }
+    .store-theme.spotlight .block {
+      border-radius: 20px;
+      width: 100%;
+      position: relative;
+      padding: 20px;
+      background-color: var(--stan-store-theme-secondary-color);
+      box-shadow: 0 15px 40px rgba(0,0,0,.25);
+      margin-bottom: 20px !important;
+    }
+    .store-theme.spotlight .block__content {
+      display: flex;
+      width: 100%;
+    }
+    .store-theme.spotlight .block__image {
+      display: block !important;
+      height: 72px;
+      width: 72px;
+      min-width: 72px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .store-theme.spotlight .block__image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+    .store-theme.spotlight .block__text {
+      color: var(--stan-store-theme-primary-text-color);
+      text-align: left;
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 15px;
+    }
+    .store-theme.spotlight .block__heading {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 130%;
+      margin: 0;
+      -webkit-line-clamp: 4;
+      color: var(--stan-store-theme-primary-text-color);
+      font-family: var(--default-font-secondary);
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .store-theme.spotlight .block__subheading {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      letter-spacing: -.5%;
+      color: var(--stan-store-theme-secondary-text-color);
+      word-wrap: anywhere;
+      margin: 8px 0 0;
+      -webkit-line-clamp: 6;
+      font-family: var(--default-font-secondary);
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .store-theme.spotlight .price-review {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .store-theme.spotlight .product-price span:first-child {
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--stan-store-theme-primary-text-color);
+    }
+    .store-theme.spotlight .product-price span:nth-child(2) {
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: line-through;
+      color: var(--stan-store-theme-primary-text-color);
+      opacity: .25;
+    }
+    .store-theme.spotlight .cta-button {
+      display: block;
+      margin-top: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,.3);
+      border-radius: 10px;
+      background: var(--stan-store-theme-primary-color);
+    }
+    .store-theme.spotlight .cta-button__button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      min-height: 60px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    .store-theme.spotlight .cta-button__label {
+      width: 80%;
+      margin: 0 20px;
+      font-family: var(--default-font-secondary);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 110%;
+      text-align: left;
+      color: var(--stan-store-theme-button-text-color);
+    }
+  </style>
+<style data-purpose="form-styles">
+    .fan-details-form { width: 100%; padding: 0; }
+    .store-theme.spotlight .fan-details-form .form-field { width: 100%; margin-top: 15px; margin-bottom: 0; }
+    .store-theme.spotlight .fan-details-form .input-bar {
+      border-radius: 5px;
+      border: none !important;
+      color: #000;
+      background-color: var(--stan-store-theme-derived2-color) !important;
+      padding: 13px !important;
+      font-size: 14px;
+      line-height: 17px;
+      min-height: 60px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .store-theme.spotlight .fan-details-form .input-bar::placeholder { color: rgba(0,0,0,.3) !important; }
+  </style>
+<style data-purpose="pill-block-styles">
+    .store-theme.spotlight .block.block--pill {
+      padding: 0;
+      border-radius: 25px;
+    }
+    .store-theme.spotlight .block.block--pill .block__button--pill {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 15px;
+      min-height: 75px;
+      border-radius: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .store-theme.spotlight .block.block--pill .block__image--pill {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    .store-theme.spotlight .block.block--pill .block__image--pill img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .store-theme.spotlight .block.block--pill .block__content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+      margin: 0 15px;
+    }
+    .store-theme.spotlight .block.block--pill .block__text--pill {
+      text-align: left;
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--stan-store-theme-primary-text-color);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+<style data-purpose="footer-styles">
+    .store-footer-controls {
+      width: 100%;
+      padding-bottom: 60px;
+      position: relative;
+      z-index: 10;
+    }
+    .external-links-block {
+      color: #888;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      text-decoration: underline;
+      text-align: center;
+    }
+    .store-locale-picker {
+      display: flex;
+      justify-content: center;
+      color: #888;
+      font-size: 12px;
+    }
+    .store-locale-picker__trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      font-weight: 700;
+      background: transparent;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .referral-banner {
+      position: fixed;
+      z-index: 3;
+      bottom: 0;
+      width: 100%;
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 16px;
+    }
+    .referral-banner a {
+      display: flex;
+      justify-content: space-between;
+      color: #6355ff;
+      border-radius: 50px;
+      max-width: min(95vw, 455px);
+      padding: 14px 15px;
+      margin: auto;
+      background: #ebebff;
+      text-decoration: none;
+    }
+  </style>
+<link data-snapdom="injected-import" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Playfair:ital,opsz,wght@0,5..1200,300;0,5..1200,400;0,5..1200,500;0,5..1200,600;0,5..1200,700;0,5..1200,800;1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,600;1,5..1200,700;1,5..1200,800&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"></head>
+<body style="background: transparent !important;">
+<div id="bg-fixed-canvas">
+<img alt="Background" class="" id="bg-main-image" src="caeliabg.jpeg">
+</div>
+<div id="__nuxt">
+<div id="__layout">
+<div>
+<div class="store__container spotlight store-theme" style="background: transparent !important;">
+<div class="white_page_wrapper store-theme spotlight" style="background: transparent !important;">
+<div class="white_page_wrapper_inner" id="userPageWrapperId">
+<div class="mx-auto">
+<div class="site__prev__masking">
+<div class="store-layout nuxt-store-page">
+<!-- BEGIN: MainHeader -->
+<div class="store-header w-100">
+<div class="store-header__content">
+<div class="store-header__image">
+<img alt="user image" class="base-preview-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp3ORp03ETN_QeGBNAMQh-res4cOOlAtGCesrl6Zyf1VWs2xCobRPe0F6CZJ1NptYz27Lunaiy2wJxAkpMNOGW5i2d8883zA_1XYG2BmMYSyYaW2TwvjrsxTq1QIWBxlYF2HpYkcJVhsEF-R7w___6cCjKQTM9f3NKKFcTWEt7P8RiEmbISHaox8ngzfzJJ0eu_zpa9UZrxDdbfRsCxLiYTCQ_tdAEYr-5WCHLH1WH2V9wG4ZR1otX">
+</div>
+<div class="store-header__profile">
+<div class="store-header__name-bio">
+<div class="store-header__names">
+<div class="store-header__fullname">Caelia S.</div>
+</div>
+<div class="store-header__bio">Helping Dreamers, Doers, and Side-hustlers launch faster with digital shortcuts</div>
+</div>
+<div class="social-icons"></div>
+</div>
+</div>
+</div>
+<!-- END: MainHeader -->
+<!-- BEGIN: StoreContent -->
+<div class="store-content">
+<div class="store-content__button-container">
+<!-- Section: Lead Magnet -->
+<div class="section">
+<div class="section-title">How Creating An Ai Influencer Can Make You Income ⬇️</div>
+<div class="overflow-visible w-100">
+<div class="masonry__grid">
+<div class="masonry__column">
+<div class="block block--lead-magnet mb-5" id="store-block-page_id-4835355">
+<div class="block__content">
+<div class="block__image">
+<img alt="block image" class="base-preview-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB588eyI6XlxzngIWcWCXYvMXZJ5lyAcHK9BZSDe3AJyvG1ZhC13e6uUPqx9Gt3xrn5bsh4g0dF38hGFT6qrWKey4IUKPBM4ByHDpFUfED33d6wEoNl9V98pstzpk24RC4RVoKjmPyIz8kROWBtJlbyCfCKzXEJQtVvT-nJec6ol2hu7NKlnm4D1Pl9Ex1qPEJVnE-wZBSJOT_ETfepVcCThq3XzQv8NNpRV3zs5uBLDLAOf4vR9dBlKHoHmwNjENRozA">
+</div>
+<div class="block__text">
+<h4 class="block__heading">Your AI Influencer's $5K Playbook</h4>
+<p class="block__subheading">The Different Ways Your AI Influencer Generates You Money Every Month, Faceless.</p>
+</div>
+</div>
+<div class="cta-button">
+<a class="cta-button__button flex items-center justify-center w-full min-h-[60px] rounded-[10px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" href="https://app.lava.top/en/products/45d79b7f-f72d-4a0c-b727-a10efbf5a1c5?currency=USD" style="background: linear-gradient(to right, rgb(191, 149, 63), rgb(252, 246, 186), rgb(179, 135, 40), rgb(251, 245, 183), rgb(170, 119, 28)); box-shadow: rgba(191, 149, 63, 0.4) 0px 0px 20px, rgba(255, 255, 255, 0.5) 0px 1px 1px inset; animation-duration: 2s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: none; animation-play-state: running; animation-name: pulse-gold; animation-timeline: auto; animation-range: normal; text-decoration: none;" target="_blank"><style>@keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(191, 149, 63, 0); } 100% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0); } }</style><div class="cta-button__label !text-[#1a1a1a] !text-center !w-full !m-0 font-bold uppercase tracking-wider">Get The Free Playbook</div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="section">
+<div class="section-title">Technical Growth Guide</div>
+<div class="overflow-visible w-100">
+<div class="masonry__grid">
+<div class="masonry__column">
+<div class="block block--callout mb-5">
+<div class="block__content">
+<div class="block__image">
+<img alt="Growth From Zero" class="base-preview-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKlXKNQNnWrjaO6lg2o4ZhQ7QM3qI37Z6SGPjOzS6TqTCevErkMODd1uCd2G65c-YzxmJvHO56snN7wBQCBj8ejdiAByNpoNROlcXZ0CH0W1uKi1Q6GH02oCWmp9RDhIwyUPKUujkrp4OOIk2qbpMqNuSquWNPUsT1bb1xFKvLuFrHHlFSnwshcutdKMufE-RYTnMhxVBgcDRHIJlOqEHLfpmwIUPvwXIbSC2IzmBQ3YPwh_xEDe1gY4yiPjQ-XVyarw">
+</div>
+<div class="block__text">
+<h4 class="block__heading">Growth From Zero</h4>
+<p class="block__subheading">This guide is a technical break-down on how I grew my Instagram page. This is not a basic Instagram “growth” guide you can find on Canva, Etsy or Chat GPT.</p>
+</div>
+</div>
+<div class="cta-button">
+<a class="cta-button__button flex items-center justify-center w-full min-h-[60px] rounded-[10px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" href="{{DATA:SCREEN:SCREEN_35}}" style="background: linear-gradient(135deg, rgb(10, 10, 10) 0%, rgb(44, 44, 44) 50%, rgb(10, 10, 10) 100%); box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 15px, rgba(255, 255, 255, 0.2) 0px 1px 1px inset; border: 1px solid rgba(255, 255, 255, 0.1); animation-duration: 3s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: none; animation-play-state: running; animation-name: premium-pulse; animation-timeline: auto; animation-range: normal; text-decoration: none;"><style>@keyframes premium-pulse { 0% { box-shadow: 0 0 5px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 20px rgba(255,255,255,0.2); } 100% { box-shadow: 0 0 5px rgba(255,255,255,0.1); } }</style><div class="cta-button__label !text-white !text-center !w-full !m-0 font-bold uppercase tracking-wider">Get My Guide</div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Cinematic Prompts -->
+<div class="section">
+<div class="section-title">The Newest Cinematic Prompt Collection!</div>
+<div class="overflow-visible w-100">
+<div class="masonry__grid">
+<div class="masonry__column">
+<div class="block block--callout mb-5" id="store-block-page_id-4935821">
+<div class="block__content">
+<div class="block__image">
+<img alt="block image" class="base-preview-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-oD_YYcV6XhGVVQWGWmSNoAyumtd-m1BUcnSc-Fu54FvhnkdnxdcF7v-NQKbMO4KNJ17ph0nanSZT2qyJCHTGntoYua_O12-rttFlwNoibUf8F5Ik8NEshiT4Ly9EkNmEtA_C5_GoZQKiVFtM7gf4e2ZgvzT9JeXbYWq5xuL4OVHIGOb97clx_RFVsmk3Ob_FFhLcn0uapx9ASk_qODbAsohqEqaJka0P6R5C03BTl8o6G0Vk7ESo">
+</div>
+<div class="block__text">
+<h4 class="block__heading">The Cinema Muse Collection 1.0</h4>
+<p class="block__subheading">70+ Cinematic Prompts to Transform Your AI Brand Into a Visual Powerhouse. No More Bland Prompts.</p>
+<div class="price-review">
+<div class="product-price overflow-hidden">
+<span class="sale-amount">$37</span>
+<span class="amount">$97</span>
+</div>
+</div>
+</div>
+</div>
+<div class="cta-button"><a class="cta-button__button flex items-center justify-center w-full min-h-[60px] rounded-[10px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" href="#" style="background: linear-gradient(135deg, rgb(10, 10, 10) 0%, rgb(44, 44, 44) 50%, rgb(10, 10, 10) 100%); box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 15px, rgba(255, 255, 255, 0.2) 0px 1px 1px inset; border: 1px solid rgba(255, 255, 255, 0.1); animation-duration: 3s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: none; animation-play-state: running; animation-name: premium-pulse; animation-timeline: auto; animation-range: normal; text-decoration: none;"><style>@keyframes premium-pulse { 0% { box-shadow: 0 0 5px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 20px rgba(255,255,255,0.2); } 100% { box-shadow: 0 0 5px rgba(255,255,255,0.1); } }</style><div class="cta-button__label !text-white !text-center !w-full !m-0 font-bold uppercase tracking-wider">Get My Guide</div></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: AI Foundation -->
+
+<!-- Section: Elite AI Avatar Brand -->
+
+<!-- Section: Faceless Cheat Code -->
+
+</div>
+</div>
+<!-- END: StoreContent -->
+<!-- BEGIN: Footer -->
+<div class="store-footer-controls" style="padding-bottom: 20px;">
+<div class="store-locale-picker">
+<button aria-label="English" class="store-locale-picker__trigger" type="button">
+<svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><circle cx="12" cy="12" r="10"></circle> <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                          EN
+                        </button>
+</div>
+</div><footer class="w-full py-10 px-4 text-center" style="background-color: rgba(0,0,0,0.85); color: rgba(255,255,255,0.6);">
+<div class="max-w-[475px] mx-auto space-y-4">
+<p class="text-sm font-semibold text-white">Caelia Sterling ©2026 - All rights reserved</p>
+<div class="text-[11px] leading-relaxed space-y-3 opacity-80">
+<p class="">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+<p class="">Results shown on this page are for example purposes only. We do not guarantee you will achieve any specific results. Your results will vary and depend on many factors, including your work ethic and experience level. The average person who buys any “how to” information gets little to no results. All business involves risk as well as massive and consistent action and effort. If you’re not willing to accept that, do not buy this course.</p>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body></html>

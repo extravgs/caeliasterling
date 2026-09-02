@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Cinema Muse Collection 1.0 - Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "secondary-container": "#dcdddd",
+                "on-surface": "#1b1b1b",
+                "on-primary": "#ffffff",
+                "primary-fixed-dim": "#c7c6c6",
+                "surface-container": "#eeeeee",
+                "surface-container-high": "#e8e8e8",
+                "text-muted": "#00000088",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#635d5c",
+                "surface": "#f9f9f9",
+                "outline-variant": "#c4c7c7",
+                "on-primary-fixed-variant": "#464747",
+                "on-primary-container": "#3b3d3d",
+                "on-secondary": "#ffffff",
+                "primary-container": "#a7a7a7",
+                "on-tertiary-fixed-variant": "#4b4545",
+                "secondary-fixed-dim": "#c6c6c7",
+                "referral-accent": "#6355FF",
+                "on-error-container": "#93000a",
+                "inverse-on-surface": "#f1f1f1",
+                "on-secondary-fixed": "#1a1c1c",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#444748",
+                "surface-tint": "#5e5e5f",
+                "on-secondary-fixed-variant": "#454747",
+                "secondary-fixed": "#e2e2e2",
+                "footer-link": "#888888",
+                "surface-variant": "#e2e2e2",
+                "secondary": "#5d5f5f",
+                "primary": "#5e5e5f",
+                "error": "#ba1a1a",
+                "on-tertiary-fixed": "#1f1b1a",
+                "outline": "#747878",
+                "inverse-surface": "#303030",
+                "on-primary-fixed": "#1a1c1c",
+                "tertiary-container": "#ada5a4",
+                "background": "#f9f9f9",
+                "on-tertiary-container": "#403b3a",
+                "referral-bg": "#EBEBFF",
+                "surface-dim": "#dadada",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cdc5c3",
+                "tertiary-fixed": "#eae0df",
+                "surface-bright": "#f9f9f9",
+                "on-background": "#1b1b1b",
+                "primary-fixed": "#e3e2e2",
+                "on-secondary-container": "#5f6161",
+                "on-error": "#ffffff",
+                "surface-container-highest": "#e2e2e2",
+                "inverse-primary": "#c7c6c6",
+                "surface-container-low": "#f3f3f3"
+        }
+      }
+    }
+  }
+</script>
+<style data-purpose="custom-styles">
+    body {
+      background-color: #f8f8f8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #1a1a1a;
+    }
+    .custom-input {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.15s ease-in-out;
+    }
+    .custom-input:focus {
+      border-color: #d1d5db;
+      box-shadow: 0 0 0 1px #d1d5db;
+    }
+    .custom-checkbox {
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid #374151;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    .custom-checkbox:checked {
+      background-color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+    .btn-purchase {
+      background-color: #a3a3a3;
+      color: #000000;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .btn-purchase:hover {
+      background-color: #8a8a8a;
+    }
+    .card-tab {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #ffffff;
+      color: #6b7280;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .card-tab.active {
+      border-color: #d1d5db;
+      background-color: #f3f4f6;
+      color: #374151;
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen">
+<div class="max-w-md mx-auto bg-white shadow-sm min-h-screen pb-12 relative overflow-hidden">
+<!-- BEGIN: Back Button Overlay -->
+<div class="absolute top-4 left-4 z-10 w-8 h-8 bg-black/30 rounded-full flex items-center justify-center cursor-pointer backdrop-blur-sm">
+<svg class="w-5 h-5" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<!-- END: Back Button Overlay -->
+<!-- BEGIN: Top Banner Image -->
+<div class="w-full h-64 bg-gray-200 relative">
+<img alt="Cinema Muse Collection Banner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA49crqBOzLJpAwQyXpmF-ryikq3iw1Thuuo3QkpKxhQAqBGBvqWUYmi-FHzml5woYo1NKw_1wkwSJ6j1TWkJb_6tNHF5O7yx2U3NXytZ8uEmORWbrYGZ_mAo0BwiMt2pZSjCZuyUsh0YkD5jZ6ZYNt0z2qK3KvndEo3JLQWR4F7lFsmQQgCPnQBJA3vVIbCPAIQMlBJHmNmvYz_ITDojLjKfUXjP0VkAuRGat13DFNW9ENEXHtBp6">
+</div>
+<!-- END: Top Banner Image -->
+<!-- BEGIN: Product Info Section -->
+<div class="px-6 pt-6 pb-4">
+<h1 class="text-2xl font-bold leading-tight mb-2">The Cinema Muse Collection 1.0</h1>
+<div class="flex items-center gap-3 mb-6">
+<span class="text-3xl font-extrabold text-[#ba1a1a] bg-[#ffdad6] px-3 py-1 rounded-lg border border-[#ba1a1a]/20 shadow-sm">$37</span>
+<span class="text-xl text-gray-400 line-through font-semibold">$97</span>
+<span class="text-xs font-bold text-white bg-[#ba1a1a] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm animate-pulse">Special Offer</span>
+</div>
+<div class="w-full mb-8">
+<img alt="Product Details" class="w-full h-auto rounded-md shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcu_shyJOA_gt2YCVJCrLjJAAj3p5dBza2EjmGKMxi7_4CQnLD0uxOZWNeY95Uge2VU5iuKgYFjZa8vXaMJgecutVqFPxM-6-wUmGG0Xw6nNy-Wns_OTD97nLlq-PaUhmui1OqIsaSfgDXuvBDpm7TKsYX74ivZpIhlVZ3mmx3eafqeJ-qZeHWP1pGWb75oKCycPvgy83hUO3q_lpjf6JXtEll2UdPPBIUf5w9lvhrsm9faUJmlM5">
+</div>
+</div>
+<!-- END: Product Info Section -->
+<!-- BEGIN: Checkout Form Section -->
+<div class="px-6 bg-[#f8f8f8] pt-8 pb-12">
+<h2 class="text-xl font-bold text-center mb-6">Grab The Cinematic Prompts</h2>
+<form class="space-y-4">
+<!-- Submit Button -->
+<a href="https://app.lava.top/products/838cd394-12f0-4187-bcf3-505fae68f514" class="block relative w-full overflow-hidden bg-gradient-to-r from-[#1e2b2a] to-[#16201f] text-white font-bold py-6 rounded-xl text-sm uppercase tracking-widest shadow-xl hover:shadow-2xl transition-all duration-500 group animate-premium-pulse">
+<div class="relative z-10 flex flex-col items-center space-y-1">
+<span class="text-xs opacity-80 font-medium">Only $37.00 <span class="line-through">$97.00</span></span>
+<span class="text-lg tracking-wider">CLAIM MY DISCOUNT NOW</span>
+</div>
+<!-- Shimmer Effect -->
+<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_2s_infinite] transition-transform"></div>
+<style>
+    @keyframes shimmer {
+      100% { transform: translateX(100%); }
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .animate-premium-pulse {
+      animation: pulse-subtle 3s ease-in-out infinite;
+    }
+  </style>
+</a>
+</form>
+</div>
+<!-- END: Checkout Form Section -->
+<!-- BEGIN: Footer -->
+<div class="flex flex-col items-center justify-center pb-8 bg-[#f8f8f8]">
+
+<div class="flex items-center gap-1 text-gray-400 text-sm">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">EN</span>
+</div>
+</div>
+<!-- END: Footer -->
+<footer class="px-6 pb-8 pt-4 bg-[#f8f8f8] text-center">
+  <p class="text-[10px] leading-relaxed text-gray-400 opacity-70">
+    This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+  </p>
+</footer></div>
+
+
+
+
+</body></html>
