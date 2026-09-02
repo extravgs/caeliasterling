@@ -350,50 +350,53 @@ body {
     const dot1 = document.getElementById('dot-1');
     const dot2 = document.getElementById('dot-2');
     
-    // Классы для активной и неактивной точки
+    // Привязываем свайпы к статичной секции-родителю, чтобы зона считывания не уезжала
+    const swipeArea = carousel.parentElement; 
+    
     const activeDotClass = "w-2 h-2 rounded-full bg-white";
     const inactiveDotClass = "w-2 h-2 rounded-full bg-white/50 border border-white";
 
-    // Функция переключения слайда
+    // Отключаем нативный захват картинок браузером, чтобы он не блокировал свайпы
+    carousel.querySelectorAll('img').forEach(img => {
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+
     function goToSlide(slideIndex) {
       if (slideIndex === 0) {
-        // Показываем первую картинку
         carousel.style.transform = 'translateX(0%)';
-        dot1.className = activeDotClass;
-        dot2.className = inactiveDotClass;
+        if(dot1) dot1.className = activeDotClass;
+        if(dot2) dot2.className = inactiveDotClass;
       } else {
-        // Сдвигаем контейнер на 100% влево, показывая вторую картинку
         carousel.style.transform = 'translateX(-100%)';
-        dot1.className = inactiveDotClass;
-        dot2.className = activeDotClass;
+        if(dot1) dot1.className = inactiveDotClass;
+        if(dot2) dot2.className = activeDotClass;
       }
     }
 
-    // Слушатели кликов по точкам
-    dot1.addEventListener('click', () => goToSlide(0));
-    dot2.addEventListener('click', () => goToSlide(1));
+    if(dot1) dot1.addEventListener('click', () => goToSlide(0));
+    if(dot2) dot2.addEventListener('click', () => goToSlide(1));
 
-    // --- Добавляем поддержку свайпов для телефонов ---
     let touchStartX = 0;
     let touchEndX = 0;
 
-    carousel.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
+    swipeArea.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].clientX;
     }, { passive: true });
 
-    carousel.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
+    swipeArea.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].clientX;
       handleSwipe();
     }, { passive: true });
 
     function handleSwipe() {
-      const swipeThreshold = 50; // минимальная длина свайпа в пикселях
-      if (touchStartX - touchEndX > swipeThreshold) {
+      const swipeThreshold = 40; // Чувствительность свайпа
+      const difference = touchStartX - touchEndX;
+
+      if (difference > swipeThreshold) {
         // Свайп влево -> показать второй слайд
         goToSlide(1);
-      }
-      if (touchEndX - touchStartX > swipeThreshold) {
-        // Свайп вправо -> вернуться на первый слайд
+      } else if (difference < -swipeThreshold) {
+        // Свайп вправо -> показать первый слайд
         goToSlide(0);
       }
     }
